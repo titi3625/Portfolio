@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.5.5
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le: Lun 21 Janvier 2013 à 15:31
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Client: sql.franceserv.fr:3306
+-- Généré le: Sam 26 Janvier 2013 à 20:55
+-- Version du serveur: 5.5.25-log
+-- Version de PHP: 5.4.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `portfolio`
+-- Base de données: `tibo-bts_db1`
 --
 
 -- --------------------------------------------------------
@@ -65,8 +65,14 @@ CREATE TABLE IF NOT EXISTS `posseder` (
 INSERT INTO `posseder` (`id_projet`, `id_categorie`) VALUES
 (2, 2),
 (1, 3),
+(3, 3),
+(4, 3),
 (1, 4),
-(1, 5);
+(3, 4),
+(4, 4),
+(1, 5),
+(3, 5),
+(4, 5);
 
 -- --------------------------------------------------------
 
@@ -81,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
   `image_projet` varchar(60) NOT NULL,
   `duree_projet` int(3) NOT NULL,
   PRIMARY KEY (`id_projet`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `projet`
@@ -89,7 +95,9 @@ CREATE TABLE IF NOT EXISTS `projet` (
 
 INSERT INTO `projet` (`id_projet`, `nom_projet`, `description_projet`, `image_projet`, `duree_projet`) VALUES
 (1, 'GSB Admin (web)', 'Ce projet consistait à développer la partie administration (back-office) d''un site marchand fictif. Nous devions créer une interface permettant de gérer les commandes, les produits ainsi que les clients et utilisateurs dont les informations sont contenues dans une base de données au format MySql. Les communications avec la BDD se font en PHP. L''inferface est en HTML-CSS-JavaScript(JQuery).', 'images/projet_gsbadmin.jpg', 6),
-(2, 'GSB Admin (C#)', 'Ce projet fait suite au premier projet GSBadmin sauf que cette fois-ci la mission consistait à créer une interface de gestion (back-office) en C#.\nL''application est autonome et permet de gérer les commandes, les produits et les clients et utilisateurs.\nCette application communique continuellement avec la base de données et les modifications sont effectuées en temps réel.\nAttention : Cette application nécéssite le .NET Framework 4.0 pour fonctionner ainsi que le fichier de configuration qui contient les informations de connexion à la BDD.', 'images/projet_gsbadmincsharp.jpg', 6);
+(2, 'GSB Admin (C#)', 'Ce projet fait suite au premier projet GSBadmin sauf que cette fois-ci la mission consistait à créer une interface de gestion (back-office) en C#.\nL''application est autonome et permet de gérer les commandes, les produits et les clients et utilisateurs.\nCette application communique continuellement avec la base de données et les modifications sont effectuées en temps réel.\nAttention : Cette application nécéssite le .NET Framework 4.0 pour fonctionner ainsi que le fichier de configuration qui contient les informations de connexion à la BDD.', 'images/projet_gsbadmincsharp.jpg', 6),
+(3, 'Maison des ligues', 'Ce projet consistait à créer une application web pour une association pour que les internautes puissent puissent consulter des formations et que les bénévoles qui le souhaite puissent s’inscrire. L’application web permet donc d’afficher la liste des formations disponibles avec toutes les informations les concernants, de permettre l’inscription des bénévoles via un formulaire et d’enregistrer toutes les informations. ', 'images/projet_maisondesligues.jpg', 4),
+(4, 'Portfolio', 'Le portfolio sur lequel vous vous trouvez actuellement fait partie des projets que j''ai du réaliser lors de ma formation. Il a pour fonction de présenter mes compétences grâce à mon curriculum vitae mais également au travers des divers projets que j''ai pu réaliser dans le cadre de ma formation ou de mes stages en entreprise. L’interface est construite en HTML-CSS et communique en PHP avec une base de donnée MySql qui contient tout mes projets.', '', 1);
 
 --
 -- Contraintes pour les tables exportées
