@@ -1,0 +1,209 @@
+body {
+	margin: 0px auto;
+	width: 960px;
+	font-size: 14px;
+	background-color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #A6A6A6;
+	
+	padding: 0px;
+	height: 100%;
+}
+
+a {
+	outline: 0;
+}
+
+/*Bande du haut*/
+.top_bar {
+	background-color: #0E2E3B;
+	margin: 0px 0px 15px 0px;
+	height: 80px;
+	display: block;
+	border-radius: 0px 0px 4px 4px;
+}
+
+p.titre {
+	display: inline-block;
+	width: 240px;
+	margin: 0px;
+	position: relative;
+	top: 20px;
+	left: 30px;
+}
+
+.titre a {
+	text-decoration: none;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 48px;
+	vertical-align: top;
+	color: #A6A6A6;
+}
+
+/*Menu du haut*/
+ul.menu_top {
+	float: right;
+	display: block;
+	position: relative;
+	right: 10px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none outside none;
+	overflow: hidden;
+}
+
+
+ul.menu_top li {
+	padding-left: 13px;
+	float: left;
+}
+
+ul.menu_top li a {
+	display: block;
+	padding: 40px 0px 26px 0px;
+	width: 95px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.2em;
+	text-align: center;
+	border-radius: 0px 0px 4px 4px;
+	color: #A6A6A6;
+	overflow: hidden;
+}
+
+ul.menu_top li a:hover, ul.menu_top li a.active1 {
+	background: -webkit-linear-gradient(top, #0E2E3b, #46f20a);
+	background: -moz-linear-gradient(top, #0E2E3b, #46f20a);
+	background: -o-linear-gradient(top, #0E2E3b, #46f20a);
+	background: -ms-linear-gradient(top, #0E2E3b, #46f20a);
+	background: linear-gradient(top, #0E2E3b, #46f20a);
+	-webkit-box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 10px #000;
+	color: black;
+}
+
+/*Menu de gauche portfolio.php*/
+.menu {
+	background-color: #0E2E3B;
+	display: inline-block;
+	position: absolute;
+	width: 130px;
+	margin: 0px 15px 10px 0px;
+	border-radius: 4px;
+
+}
+
+.menu ul {
+	float: left;
+	display: block;
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	list-style: none outside none;
+}
+
+
+.menu ul li {
+	padding: 5px 0px 5px 0px;
+	float: bottom;
+}
+
+.menu ul li a {
+	display: block;
+	padding: 5px 5px 5px 10px;
+	width: 120px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.2em;
+	text-align: left;
+	border-radius: 0px 4px 4px 0px;
+	color: #A6A6A6;
+}
+
+.menu ul li a:hover, .menu ul li a.active {
+	background: -webkit-linear-gradient(left, #0E2E3b, #46f20a);
+	background: -moz-linear-gradient(left, #0E2E3b, #46f20a);
+	background: -o-linear-gradient(left, #0E2E3b, #46f20a);
+	background: -ms-linear-gradient(left, #0E2E3b, #46f20a);
+	background: linear-gradient(left, #0E2E3b, #46f20a);
+	-webkit-box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 10px #000;
+	color: black;
+}
+
+/*Contenu portfolio.php, contact.php, index.php, cv.php*/
+.content {
+	background-color: #0E2E3B;
+	width: 795px;
+	display: inline-block;
+	margin: 0px 0px 15px 145px;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+.content a {
+	color: black;
+}
+
+/*Mise en forme CV*/
+.competence {
+	border-collapse: collapse;
+	margin: auto;
+	width: 530px;
+}
+
+.competence caption, .titrecv {
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.titrecv {
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.competence td{
+	border: 2px solid #E92232;
+	padding: 5px;
+	
+}
+
+/*Mise en forme du formulaire de contact*/
+.contact {
+	width: 395px;
+	display: block;
+	vertical-align: middle;
+	margin: auto;
+}
+
+.contact table {
+	margin: auto;
+}
+
+.contact table td {
+	height: 20px;
+}
+
+.contact textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 232px;
+}
+
+#nom, #mail {
+	width: 232px;
+}
+
+/*Mise en forme du footer*/
+.footer {
+	background-color: #0E2E3B;
+	width: 795px;
+	border-radius: 4px;
+	padding: 10px;
+	margin-left: 145px;
+	text-align: center;
+}
