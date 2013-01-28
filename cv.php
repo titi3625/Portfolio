@@ -40,6 +40,10 @@
 							<td>Eclipse, Netbeans, Visual C# (2008, 2010), Notepad++, Sublime Text 2</td>
 						</tr>
 						<tr>
+							<td>Base de données</td>
+							<td>SQL, MySql, PhpMyAdmin, PostGreSql, PhpPgAdmin</td>
+						</tr>
+						<tr>
 							<td>Système d'exploitation</td>
 							<td>Windows (2000, xp, Vista, 7), Linux (Ubuntu, Debian)</td>
 						</tr>
