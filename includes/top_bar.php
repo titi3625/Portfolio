@@ -10,7 +10,7 @@
 							<li><a href=\"index.php\"  class=\"active1\">Accueil</a></li>
 							<li><a href=\"cv.php\">CV</a></li> 
 							<li><a href=\"portfolio.php\" >Portfolio</a></li>
-							<li><a href=\"contact.php\" >Contact</a></li>s
+							<li><a href=\"contact.php\" >Contact</a></li>
 						</ul>	
 					</div>");
 			break;
