@@ -185,7 +185,8 @@ ul.menu_top li a:hover, ul.menu_top li a.active1 {
 }
 
 .contact table td {
-	height: 20px;
+	height: 25px;
+	padding: 5px;
 }
 
 .contact textarea {
@@ -196,7 +197,22 @@ ul.menu_top li a:hover, ul.menu_top li a.active1 {
 
 #nom, #mail {
 	width: 232px;
+	height: 25px;
 }
+
+#nom, #mail, #message {
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.9) inset;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.9) inset;
+	border: 0;
+	border-radius: 5px;
+}
+
+#nom:focus, #mail:focus, #message:focus {
+	-webkit-box-shadow: 0px 0px 5px #ccc;
+	box-shadow: 0px 0px 5px #ccc;
+}
+
+
 
 /*Mise en forme du footer*/
 .footer {

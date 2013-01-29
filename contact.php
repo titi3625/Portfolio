@@ -36,8 +36,8 @@
 								<div class="erreurMess"></div>
 							</tr>
 							<tr>
-								<td></td>
-								<td align="center"><input type="submit" value="Envoyer" id="envoyer"></td>
+								
+								<td align="center" colspan="2"><input type="submit" value="Envoyer" id="envoyer"></td>
 							</tr>
 						</table>
 					</form>
