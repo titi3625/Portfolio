@@ -22,17 +22,15 @@
 					<li><a href="#java">Java</a></li>
 					<li><a href="#csharp">C#.NET</a></li>
 					<li><a href="#web">Web</a></li>
-					<li><a href="#php">PHP</a></li>
-					<li><a href="#bdd">BDD</a></li>
 				</ul>
 			</div>
 
 			<div id="tous">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie GROUP BY id_projet;');
-					while($ligne = $reponse->fetch())
-					{
-						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
+				$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie GROUP BY id_projet;');
+				while($ligne = $reponse->fetch())
+				{
+					$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
 				?>
 				<div class="content">
 					<div class="projet">
@@ -46,14 +44,27 @@
 							}
 							?>
 						</p> 
-						<hr>
+						<hr> <!-- Barre de séparation avec le titre -->
 						<p class="contenu_projet">
-							<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
-								<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="188px" height="100px">
-							</a>
+							<p align="center">
+								<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
+									<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="600px">
+								</a>
+							</p>
+
+							<p align="justify"><?php echo $ligne['description_projet']; ?></p>
+
+							<p>Durée : <?php echo $ligne['duree_projet']; ?> semaine(s)</p>
 							
-							Durée : <?php echo $ligne['duree_projet']; ?> semaine(s) <br> <br>
-							Description : <?php echo $ligne['description_projet']; ?>
+							<p>
+								Situation(s) obligatoire(s) : <br>
+								<?php echo $ligne['situation_projet']; ?>
+							</p>
+
+							<p>
+								Activité du référentiel : <br>
+								<?php echo $ligne['activite_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -66,7 +77,7 @@
 
 			<div id="java">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Java";');
+					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Java";');
 					while($ligne = $reponse->fetch())
 					{
 						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -83,14 +94,27 @@
 							}
 							?>
 						</p> 
-						<hr>
+						<hr> <!-- Barre de séparation avec le titre -->
 						<p class="contenu_projet">
-							<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
-								<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="188px" height="100px">
-							</a>
+							<p align="center">
+								<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
+									<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="600px">
+								</a>
+							</p>
+
+							<p align="justify"><?php echo $ligne['description_projet']; ?></p>
+
+							<p>Durée : <?php echo $ligne['duree_projet']; ?> semaine(s)</p>
 							
-							Durée : <?php echo $ligne['duree_projet']; ?> semaine(s) <br> <br>
-							Description : <?php echo $ligne['description_projet']; ?>
+							<p>
+								Situation(s) obligatoire(s) : <br>
+								<?php echo $ligne['situation_projet']; ?>
+							</p>
+
+							<p>
+								Activité du référentiel : <br>
+								<?php echo $ligne['activite_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -103,7 +127,7 @@
 
 			<div id="csharp">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "C#.NET";');
+					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "C#.NET";');
 					while($ligne = $reponse->fetch())
 					{
 						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -120,14 +144,27 @@
 							}
 							?>
 						</p> 
-						<hr>
+						<hr> <!-- Barre de séparation avec le titre -->
 						<p class="contenu_projet">
-							<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
-								<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="188px" height="100px">
-							</a>
+							<p align="center">
+								<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
+									<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="600px">
+								</a>
+							</p>
+
+							<p align="justify"><?php echo $ligne['description_projet']; ?></p>
+
+							<p>Durée : <?php echo $ligne['duree_projet']; ?> semaine(s)</p>
 							
-							Durée : <?php echo $ligne['duree_projet']; ?> semaine(s) <br> <br>
-							Description : <?php echo $ligne['description_projet']; ?>
+							<p>
+								Situation(s) obligatoire(s) : <br>
+								<?php echo $ligne['situation_projet']; ?>
+							</p>
+
+							<p>
+								Activité du référentiel : <br>
+								<?php echo $ligne['activite_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -140,7 +177,7 @@
 
 			<div id="web">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Web";');
+					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Web";');
 					while($ligne = $reponse->fetch())
 					{
 						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -157,14 +194,27 @@
 							}
 							?>
 						</p> 
-						<hr>
+						<hr> <!-- Barre de séparation avec le titre -->
 						<p class="contenu_projet">
-							<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
-								<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="188px" height="100px">
-							</a>
+							<p align="center">
+								<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
+									<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="600px">
+								</a>
+							</p>
+
+							<p align="justify"><?php echo $ligne['description_projet']; ?></p>
+
+							<p>Durée : <?php echo $ligne['duree_projet']; ?> semaine(s)</p>
 							
-							Durée : <?php echo $ligne['duree_projet']; ?> semaine(s) <br> <br>
-							Description : <?php echo $ligne['description_projet']; ?>
+							<p>
+								Situation(s) obligatoire(s) : <br>
+								<?php echo $ligne['situation_projet']; ?>
+							</p>
+
+							<p>
+								Activité du référentiel : <br>
+								<?php echo $ligne['activite_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -175,80 +225,7 @@
 				?>
 			</div>
 
-			<div id="php">
-				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "PHP";');
-					while($ligne = $reponse->fetch())
-					{
-						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
-				?>
-				<div class="content">
-					<div class="projet">
-						<p class="nom_projet"><?php echo $ligne['nom_projet']; ?><a href=""></a>
-							<?php 
-							while($ligneCat = $reponseCat->fetch())
-							{
-								echo '<span class="categorie">';
-								echo '<a href="#'.$ligneCat['balise_categorie'].'" onclick="clickCategorie();">'.$ligneCat['nom_categorie'].'</a>';
-								echo '</span>';
-							}
-							?>
-						</p> 
-						<hr>
-						<p class="contenu_projet">
-							<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
-								<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="188px" height="100px">
-							</a>
-								
-							Durée : <?php echo $ligne['duree_projet']; ?> semaine(s) <br> <br>
-							Description : <?php echo $ligne['description_projet']; ?>
-						</p>
-					</div>
-				</div>
-				
-				<?php 
-				} 
-				$reponse->closeCursor(); 
-				?>
-			</div>
-
-			<div id="bdd">
-				
-				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "BDD";');
-					while($ligne = $reponse->fetch())
-					{
-						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
-				?>
-				<div class="content">
-					<div class="projet">
-						<p class="nom_projet"><?php echo $ligne['nom_projet']; ?><a href=""></a>
-							<?php 
-							while($ligneCat = $reponseCat->fetch())
-							{
-								echo '<span class="categorie">';
-								echo '<a href="#'.$ligneCat['balise_categorie'].'" onclick="clickCategorie();">'.$ligneCat['nom_categorie'].'</a>';
-								echo '</span>';
-							}
-							?>
-						</p> 
-						<hr>
-						<p class="contenu_projet">
-							<a href="<?php echo $ligne['image_projet']; ?>" rel="lightbox" title="Projet GSB Admin">
-								<img src="<?php echo $ligne['image_projet']; ?>" alt="Image projet" width="188px" height="100px">
-							</a>
-							
-							Durée : <?php echo $ligne['duree_projet']; ?> semaine(s) <br> <br>
-							Description : <?php echo $ligne['description_projet']; ?>
-						</p>
-					</div>
-				</div>
-				
-				<?php 
-				} 
-				$reponse->closeCursor(); 
-				?>
-			</div>
+			
 
 		</div>
 		<?php include("includes/footer.php"); ?>
@@ -256,6 +233,6 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script type="text/javascript" src="js/tabs.js"></script>
 	<script src="js/lightbox.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/categorie.js"></script>
 </body>
 </html>

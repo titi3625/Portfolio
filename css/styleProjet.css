@@ -4,6 +4,7 @@
 
 .nom_projet {
 	margin-top: 0px;
+	font-weight: bold;
 }
 
 .categorie {
@@ -14,6 +15,7 @@
 	text-decoration: none;
 	font-family: Arial, sans-serif;
 	font-size: 10pt;
+	font-weight: normal;
 	color: #00000;
 	background: #444;
 	padding: 3px;
@@ -39,15 +41,10 @@
 }
 
 .contenu_projet {
-	position: relative;
 	margin: 0;
-	width: 595px;
-	padding-left: 200px;
 	overflow: hidden;
 }
 
-.contenu_projet img {
-	position: absolute;
-	left: 0;
-	border-radius: 5px;
+.projet img {
+	border: 1px solid #000;
 }

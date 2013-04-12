@@ -18,7 +18,7 @@ if(isset($_POST) && isset($_POST['nom']) && isset($_POST['mail']) && isset($_POS
 		$destinataire = "campos.thibault@gmail.com";
 		$sujet = "Formulaire de contact";
 
-		$msg = "Nom : ".$nom,$passage_ligne."Email : ".$mail,$passage_ligne."Message : ".$message;
+		$msg = "Nom : ".$nom.$passage_ligne."Email : ".$mail.$passage_ligne."Message : ".$message;
 
 		//=====Création du header de l'e-mail
 		// $header = "From: \"".$nom."\"<".$mail.">".$passage_ligne;
