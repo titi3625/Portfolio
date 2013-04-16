@@ -27,7 +27,7 @@
 
 			<div id="tous">
 				<?php
-				$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie GROUP BY id_projet;');
+				$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet, competences_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie GROUP BY id_projet;');
 				while($ligne = $reponse->fetch())
 				{
 					$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -65,6 +65,11 @@
 								Activité du référentiel : <br>
 								<?php echo $ligne['activite_projet']; ?>
 							</p>
+
+							<p>
+								Compétences du référentiel : <br>
+								<?php echo $ligne['competences_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -77,7 +82,7 @@
 
 			<div id="java">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Java";');
+					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet, competences_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Java";');
 					while($ligne = $reponse->fetch())
 					{
 						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -115,6 +120,11 @@
 								Activité du référentiel : <br>
 								<?php echo $ligne['activite_projet']; ?>
 							</p>
+
+							<p>
+								Compétences du référentiel : <br>
+								<?php echo $ligne['competences_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -127,7 +137,7 @@
 
 			<div id="csharp">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "C#.NET";');
+					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet, competences_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "C#.NET";');
 					while($ligne = $reponse->fetch())
 					{
 						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -165,6 +175,11 @@
 								Activité du référentiel : <br>
 								<?php echo $ligne['activite_projet']; ?>
 							</p>
+
+							<p>
+								Compétences du référentiel : <br>
+								<?php echo $ligne['competences_projet']; ?>
+							</p>
 						</p>
 					</div>
 				</div>
@@ -177,7 +192,7 @@
 
 			<div id="web">
 				<?php
-					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Web";');
+					$reponse = $bdd->query('SELECT id_projet, nom_projet, description_projet, image_projet, duree_projet, situation_projet, activite_projet, competences_projet FROM projet NATURAL JOIN posseder NATURAL JOIN categorie WHERE nom_categorie = "Web";');
 					while($ligne = $reponse->fetch())
 					{
 						$reponseCat = $bdd->query('SELECT nom_categorie, balise_categorie FROM categorie NATURAL JOIN posseder WHERE posseder.id_projet = "'.$ligne["id_projet"].'";');
@@ -214,6 +229,11 @@
 							<p>
 								Activité du référentiel : <br>
 								<?php echo $ligne['activite_projet']; ?>
+							</p>
+
+							<p>
+								Compétences du référentiel : <br>
+								<?php echo $ligne['competences_projet']; ?>
 							</p>
 						</p>
 					</div>
